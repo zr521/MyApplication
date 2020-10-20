@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/colortitle"
+       android:gravity="center"
+       android:orientation="vertical"
+       >
+
+       <Button
+           android:id="@+id/mainButton2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="20sp"
+           android:textColor="@color/colorwhite"
+           android:text="练习" />
+
+       <Button
+           android:id="@+id/mainButton5"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="20sp"
+           android:textColor="@color/colorwhite"
+           android:text="系统" />
+   </LinearLayout>
+
+</LinearLayout>
