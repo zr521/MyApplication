@@ -53,9 +53,14 @@ public class CityActivity extends Activity {
             listitem.add(showitem);
         }
 
+        gridAdaper = new SimpleAdapter(
+                CityActivity.this,
+                listitem,
+                R.layout.ctitems,
+                new String[]{"imageid", "stringid"},
+                new int[]{R.id.CtitemsImageView, R.id.CtitemsTextVIew1});
         // 数据源
         // layout：每个列表项显示的布局，
-        gridAdaper = new SimpleAdapter(CityActivity.this, listitem, R.layout.ctitems, new String[]{"imageid", "stringid"}, new int[]{R.id.CtitemsImageView, R.id.CtitemsTextVIew1});
         //（context：一般指当前Activity对象，data：数据源变量，
         // new String[]{}：数据源中的“键”,
         // new int[]{}：显示数据源的控件ID)；

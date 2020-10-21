@@ -4,31 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Six_Goshoping.GoshopingActivity">
+    tools:context=".Six_Goshoping.GoshopingActivity"
+    android:background="@drawable/bg_environment">
     <ImageView
-        android:id="@+id/imageview1"
-        android:layout_width="match_parent"
+        android:id="@+id/GS_imageview1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/bg_frame_descend_setting" />
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_inventory_select"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/GS_imageview1"
+        android:background="@drawable/bg_frame_descend_setting"
+        android:layout_margin="15dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center_vertical"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="#A2A2A2">
+            >
             <TextView
                 android:id="@+id/GStextview1"
                 android:layout_width="wrap_content"
@@ -46,6 +49,7 @@
                 android:singleLine="false"
                 android:textColor="@color/colorwhite"
                 android:layout_marginLeft="5dp"
+                android:background="@drawable/input"
                 >
                 <requestFocus/>
             </TextView>
@@ -58,11 +62,12 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/colorwhite"/>
             <Spinner
-                android:id="@+id/GS-text-Start"
+                android:id="@+id/GS_text_Start"
                 android:layout_width="wrap_content"
                 android:layout_height="24dp"
                 android:gravity="center"
                 android:layout_marginLeft="5dp"
+                android:background="@drawable/input"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -74,11 +79,12 @@
                 android:layout_marginLeft="5dp"
                 />
             <Spinner
-                android:id="@+id/GS-text-End"
+                android:id="@+id/GS_text_End"
                 android:layout_width="wrap_content"
                 android:layout_height="24dp"
                 android:gravity="center"
                 android:layout_marginLeft="5dp"
+                android:background="@drawable/input"
                 />
             <Button
                 android:id="@+id/GSbtSearch"
@@ -87,14 +93,31 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/lookup"
                 />
+
+
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+           >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+        </LinearLayout>
+
+
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginTop="25dp"
                 android:gravity="center_vertical"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
             <TextView

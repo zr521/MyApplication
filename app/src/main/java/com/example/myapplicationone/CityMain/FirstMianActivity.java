@@ -1,7 +1,6 @@
 package com.example.myapplicationone.CityMain;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -13,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.example.myapplicationone.BaseActivity;
 import com.example.myapplicationone.City.CityActivity;
@@ -28,17 +26,23 @@ import java.util.HashMap;
 
 public class FirstMianActivity extends BaseActivity {
 private Button mFbt_Login,mFbt_register,mFBtback;
-private EditText mFUser,mFPasswd;
+private EditText mFUser, mFPassed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_mian);
+
         mFbt_Login=findViewById(R.id.FmBt_Login);
         mFbt_register=findViewById(R.id.FmBt_Register);
         mFUser=findViewById(R.id.Fm_User);
-        mFPasswd=findViewById(R.id.Fm_Passwd);
+        mFPassed =findViewById(R.id.Fm_Passwd);
         mFBtback=findViewById(R.id.FmBtBack);
-
+        mFBtback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateTo(MainActivity.class);
+            }
+        });
         show();
     }
    private void show(){
@@ -46,7 +50,7 @@ private EditText mFUser,mFPasswd;
        mFbt_Login.setOnClickListener(click);
        mFbt_register.setOnClickListener(click);
        mFUser.setOnClickListener(click);
-       mFPasswd.setOnClickListener(click);
+       mFPassed.setOnClickListener(click);
 
        mFBtback.setOnClickListener(click);
     }
@@ -56,9 +60,10 @@ private EditText mFUser,mFPasswd;
             switch (v.getId()){
                 case R.id.FmBt_Login:
                     String user=mFUser.getText().toString().trim();
-                    String passwd=mFPasswd.getText().toString().trim();
-                    login(user,passwd);
-                   // loginDialog();//显示对话框
+                    String passwd= mFPassed.getText().toString().trim();
+                    //login(user,passwd);
+                    navigateTo(CityActivity.class);
+                    //loginDialog();//显示对话框
                     break;
                 case R.id.FmBt_Register:
                     navigateTo(FirstMainZcActivity.class);
@@ -94,7 +99,7 @@ private EditText mFUser,mFPasswd;
                         //将数据存入Intent对象
                         Intent intent =new Intent();
                             intent.putExtra("user",mFUser.getText().toString().trim());
-                            intent.putExtra("passwd",mFPasswd.getText().toString().trim());
+                            intent.putExtra("passwd", mFPassed.getText().toString().trim());
                     }
                 }).create();
         alertDialog.show();

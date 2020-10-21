@@ -64,6 +64,7 @@ public class GoshopingActivity extends Activity {
                 new int[]{ R.id.GSNO,R.id.GSMoney,R.id.GSState,R.id.GSTime,R.id.GSOperate});
         lv1.setAdapter(gridAdaper);
    //   lv1.setAdapter(new MyAdapter(GoshopingActivity.this));
+
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

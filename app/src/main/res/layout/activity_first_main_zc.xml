@@ -7,7 +7,7 @@
     tools:context=".CityMain.FirstMainZcActivity"
 
     android:orientation="vertical"
-    android:background="@drawable/city_bg_menu">
+    android:background="@drawable/bg_frame_descend_setting">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,8 +36,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginLeft="185dp"
-        android:layout_marginRight="185dp"
         android:layout_marginTop="30dp"
         >
         <TextView
@@ -46,21 +44,24 @@
             android:layout_height="wrap_content"
             android:text="账         号:"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="24sp"
+            android:layout_marginLeft="185dp"
+
             />
+
         <EditText
             android:id="@+id/FmZc_User"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginLeft="38dp"
-            android:ems="14"
-            />
+            android:layout_marginRight="185dp"
+            android:ems="12" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginLeft="185dp"
+
         android:layout_marginRight="65dp"
         android:layout_marginTop="10dp"
         >
@@ -69,8 +70,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="密         码:"
+            android:layout_marginLeft="185dp"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="24sp"
             />
         <EditText
             android:id="@+id/FmZc_Passwd"
@@ -104,7 +106,7 @@
             android:layout_height="wrap_content"
             android:text="确认密码:"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="24sp"
             />
         <EditText
             android:id="@+id/FmZc_Passwdagain"
